@@ -1,5 +1,6 @@
 package com.zlz.route.filter;
 
+import com.zlz.basic.utils.SnowWorker;
 import com.zlz.route.common.trace.Trace;
 import com.zlz.route.common.trace.TraceContext;
 import com.zlz.route.common.user.User;
@@ -26,6 +27,8 @@ public class TraceFilter implements Filter {
 
     @Resource
     private ServerPortProperties serverPortProperties;
+    @Resource
+    private SnowWorker snowWorker;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -58,7 +61,7 @@ public class TraceFilter implements Filter {
     private void initTrace() {
         // TODO 获取真正用户信息
         Trace trace = new Trace();
-        trace.setTraceId(-100L);
+        trace.setTraceId(snowWorker.nextId());
         User user = new User();
         user.setId(-100L);
         trace.setUser(user);
