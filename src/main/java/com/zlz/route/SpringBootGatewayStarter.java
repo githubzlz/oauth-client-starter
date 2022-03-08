@@ -1,9 +1,9 @@
-package com.zlz.gateway;
+package com.zlz.route;
 
-import com.zlz.gateway.apis.ApisUp;
-import com.zlz.gateway.interceptor.SecurityInterceptor;
-import com.zlz.gateway.interceptor.WebSecurityConfig;
-import com.zlz.gateway.properties.ServerPortProperties;
+import com.zlz.route.apis.ApisUp;
+import com.zlz.route.interceptor.SecurityInterceptor;
+import com.zlz.route.interceptor.WebSecurityConfig;
+import com.zlz.route.properties.ServerPortProperties;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;

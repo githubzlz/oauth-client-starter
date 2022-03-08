@@ -1,4 +1,4 @@
-package com.zlz.gateway.interceptor;
+package com.zlz.route.interceptor;
 
 import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

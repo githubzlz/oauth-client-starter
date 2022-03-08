@@ -1,4 +1,4 @@
-package com.zlz.gateway.properties;
+package com.zlz.route.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * @date 2022-02-25 16:49:47
  */
 @Component
-@ConfigurationProperties(prefix = "gateway")
+@ConfigurationProperties(prefix = "route")
 public class ServerPortProperties {
 
     private String host;

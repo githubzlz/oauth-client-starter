@@ -1,6 +1,6 @@
-package com.zlz.gateway.interceptor;
+package com.zlz.route.interceptor;
 
-import com.zlz.gateway.properties.ServerPortProperties;
+import com.zlz.route.properties.ServerPortProperties;
 import com.zlz.route.common.trace.Trace;
 import com.zlz.route.common.trace.TraceContext;
 import com.zlz.route.common.user.User;
@@ -36,15 +36,22 @@ public class SecurityInterceptor extends HandlerInterceptorAdapter {
         destroyTrace();
     }
 
+    /**
+     * 初始化trace信息
+     */
     private void initTrace(){
+        // TODO 获取真正用户信息
         Trace trace = new Trace();
-        trace.setTraceId(Thread.currentThread().getId());
+        trace.setTraceId(-100L);
         User user = new User();
-        user.setId(Thread.currentThread().getId());
+        user.setId(-100L);
         trace.setUser(user);
         TraceContext.init(trace);
     }
 
+    /**
+     * 请求完成销毁信息
+     */
     private void destroyTrace(){
         TraceContext.destroy();
     }

@@ -1,24 +1,24 @@
 {
   "groups": [
     {
-      "name": "gateway",
-      "type": "com.zlz.gateway.properties.ServerPortProperties",
-      "sourceType": "com.zlz.gateway.properties.ServerPortProperties"
+      "name": "route",
+      "type": "com.zlz.route.properties.ServerPortProperties",
+      "sourceType": "com.zlz.route.properties.ServerPortProperties"
     }
   ],
   "properties": [
     {
-      "name": "gateway.host",
+      "name": "route.host",
       "type": "java.lang.String",
-      "sourceType": "com.zlz.gateway.properties.ServerPortProperties",
+      "sourceType": "com.zlz.route.properties.ServerPortProperties",
       "description": "springboot-gateway-server-host",
-      "defaultValue": "gateway.host"
+      "defaultValue": "172.0.0.1"
     },{
-      "name": "gateway.port",
+      "name": "route.port",
       "type": "java.lang.Integer",
-      "sourceType": "com.zlz.gateway.properties.ServerPortProperties",
+      "sourceType": "com.zlz.route.properties.ServerPortProperties",
       "description": "springboot-gateway-server-host",
-      "defaultValue": "gateway.port"
+      "defaultValue": "8080"
     }
   ],
   "hints": []
