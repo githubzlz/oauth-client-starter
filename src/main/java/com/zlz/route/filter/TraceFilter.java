@@ -69,7 +69,6 @@ public class TraceFilter implements Filter {
         TraceContext.init(trace);
 
         MDC.put("traceId", TraceContext.getTraceId().toString());
-        MDC.put("test", "123123123");
     }
 
     /**
