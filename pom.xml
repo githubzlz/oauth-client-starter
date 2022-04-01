@@ -9,7 +9,7 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.zlz.route</groupId>
+  <groupId>com.zlz.oauth</groupId>
   <artifactId>oauth-client-starter</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
