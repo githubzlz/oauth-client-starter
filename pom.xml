@@ -10,7 +10,7 @@
   </parent>
 
   <groupId>com.zlz.route</groupId>
-  <artifactId>route-controller-client-starter</artifactId>
+  <artifactId>oauth-client-starter</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <packaging>jar</packaging>
