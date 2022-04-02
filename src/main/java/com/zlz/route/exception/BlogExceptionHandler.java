@@ -18,10 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class BlogExceptionHandler {
 
     @ExceptionHandler(value = Exception.class)
-    public ResultSet exceptionHandler(Exception e) {
+    public ResultSet<Integer> exceptionHandler(Exception e) {
         log.error("发生异常:", e);
         if (e instanceof BizException) {
-            return ResultSet.error(e.getMessage());
+            return new ResultSet<>(e.getMessage(), ((BizException) e).getCode());
         }
         return ResultSet.error("未知错误，请联系管理员");
     }
