@@ -1,9 +1,8 @@
 package com.zlz.route.filter;
 
+import com.zlz.basic.trace.Trace;
+import com.zlz.basic.trace.TraceContext;
 import com.zlz.basic.utils.SnowWorker;
-import com.zlz.route.common.trace.Trace;
-import com.zlz.route.common.trace.TraceContext;
-import com.zlz.route.common.user.User;
 import com.zlz.route.properties.ServerPortProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
@@ -15,7 +14,6 @@ import javax.servlet.*;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.Instant;
-import java.util.UUID;
 
 /**
  * @author zhulinzhong
@@ -63,9 +61,7 @@ public class TraceFilter implements Filter {
         // TODO 获取真正用户信息
         Trace trace = new Trace();
         trace.setTraceId(snowWorker.nextId());
-        User user = new User();
-        user.setId(-100L);
-        trace.setUser(user);
+        trace.setUserId(10086L);
         TraceContext.init(trace);
 
         MDC.put("traceId", TraceContext.getTraceId().toString());
