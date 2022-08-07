@@ -49,4 +49,17 @@
 
   </dependencies>
 
+  <distributionManagement>
+    <repository>
+      <id>release</id>
+      <name>releases</name>
+      <url>http://nexus-web.test.com:30157/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshot</id>
+      <name>snapshot</name>
+      <url>http://nexus-web.test.com:30157/repository/maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
 </project>
